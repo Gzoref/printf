@@ -57,7 +57,7 @@
 
  - +
  - space
- - #
+ - \#
 
 
 9. Handle the following length modifiers for non-custom conversion specifiers:
