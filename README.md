@@ -10,8 +10,8 @@
 	   	* Handle the following conversion specifiers:
 			- d and i
 			- You don’t have to handle the flag characters
-    			- You don’t have to handle field width
-	    		- You don’t have to handle precision
+    		- You don’t have to handle field width
+	    	- You don’t have to handle precision
 <hr>
 
 
@@ -24,7 +24,7 @@
 
 	4. Handle the following conversion specifiers
 
-	    		- u
+            - u
 			- o
 			- x
 			- X
@@ -35,12 +35,12 @@
 <hr>
 
 
-	5. Use a local buffer of 1024 chars in order to call write as little as possible.
+	 5. Use a local buffer of 1024 chars in order to call write as little as possible.
 <hr>
 
 
 
-	6. Handle the following custom conversion specifier
+	 6. Handle the following custom conversion specifier
 
 	         	   -S : prints the string.
 	    	 	   - Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, 
@@ -70,7 +70,7 @@
 
 	9. Handle the following length modifiers for non-custom conversion specifiers:
 
-	       - l
+	           - l
                - h
 	-Conversion specifiers to handle: d, i, u, o, x, X
 <hr>
