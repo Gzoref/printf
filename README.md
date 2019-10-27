@@ -2,8 +2,8 @@
 
 
 	0.  Write a function that produces output according to a format.
-
 <hr>
+
 
 	1. Write funcion that produces output according to a format.
 
@@ -12,16 +12,17 @@
     	- You don’t have to handle the flag characters
     	- You don’t have to handle field width
 	    - You don’t have to handle precision
-
+<hr>
 
 
     3. Handle the following custom conversion specifiers:
 
         -b: the unsigned int argument is converted to binary
+<hr>
 
 
 
-	4. Handle the following conversion specifiers:
+	4. Handle the following conversion specifiers
 
 	    - u
 		- o
@@ -31,10 +32,11 @@
 		- You don’t have to handle field width
 		- You don’t have to handle precision
 		- You don’t have to handle the length modifier
-
+<hr>
 
 
 	5. Use a local buffer of 1024 chars in order to call write as little as possible.
+<hr>
 
 
 
@@ -43,6 +45,7 @@
 	    -S : prints the string.
 	    - Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, 
 	followed by the ASCII code value in hexadecimal (upper case - always 2 characters)
+<hr>
 
 
 
@@ -52,6 +55,7 @@
        -You don’t have to handle field width
        -You don’t have to handle precision
        -You don’t have to handle the length modifiers
+<hr>
 
 
 
@@ -61,6 +65,7 @@
 	   - space
        - \#
 
+<hr>
 
 
 	9. Handle the following length modifiers for non-custom conversion specifiers:
@@ -68,34 +73,40 @@
 	- l
 	- h
 	-Conversion specifiers to handle: d, i, u, o, x, X
+<hr>
 
 
 	10. Handle the field width for non-custom conversion specifiers.
+<hr>
 
 
 
 	11. Handle the precision for non-custom conversion specifiers.
+<hr>
 
 
 
 	12. Handle the 0 flag character for non-custom conversion specifiers.
+<hr>
 
 
 
 	13. Handle the - flag character for non-custom conversion specifiers.
+<hr>
 
 
 
 	14. Handle the following custom conversion specifier:
 
 	   - r: prints the reversed string
+<hr>
 
 
 
 	 15. Handle the following custom conversion specifier:
 
 	   - R: prints the rot13'ed string
-
+<hr>
 
 
 	 16. All the above options work well together.
