@@ -3,6 +3,7 @@
 
 #include <limits.h>
 #include <stdio.h>
+#include <stdarg.h>
 
 /* Prototypes */
 /* Task 0 */
