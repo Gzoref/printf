@@ -7,31 +7,31 @@
 
 	1. Write funcion that produces output according to a format.
 
-	   	- Handle the following conversion specifiers:
-		- d and i
-    		- You don’t have to handle the flag characters
-    		- You don’t have to handle field width
-	    	- You don’t have to handle precision
+	   	* Handle the following conversion specifiers:
+			- d and i
+			- You don’t have to handle the flag characters
+    			- You don’t have to handle field width
+	    		- You don’t have to handle precision
 <hr>
 
 
     3. Handle the following custom conversion specifiers:
 
-        	-b: the unsigned int argument is converted to binary
+        		-b: the unsigned int argument is converted to binary
 <hr>
 
 
 
 	4. Handle the following conversion specifiers
 
-	    	- u
-		- o
-		- x
-		- X
-		- You don’t have to handle the flag characters
-		- You don’t have to handle field width
-		- You don’t have to handle precision
-		- You don’t have to handle the length modifier
+	    		- u
+			- o
+			- x
+			- X
+			- You don’t have to handle the flag characters
+			- You don’t have to handle field width
+			- You don’t have to handle precision
+			- You don’t have to handle the length modifier
 <hr>
 
 
@@ -42,28 +42,28 @@
 
 	6. Handle the following custom conversion specifier
 
-	         -S : prints the string.
-	    	 - Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, 
-	            followed by the ASCII code value in hexadecimal (upper case - always 2 characters)
+	         	   -S : prints the string.
+	    	 	   - Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, 
+	            	   followed by the ASCII code value in hexadecimal (upper case - always 2 characters)
 <hr>
 
 
 
 	7. Handle the following conversion specifier: p
 
-	    -You don’t have to handle the flag characters
-		 - You don’t have to handle field width
-		 - You don’t have to handle precision
-		 - You don’t have to handle the length modifiers
+	    		-You don’t have to handle the flag characters
+			- You don’t have to handle field width
+		 	- You don’t have to handle precision
+		 	- You don’t have to handle the length modifiers
 <hr>
 
 
 
     8. Handle the following flag characters for non-custom conversion specifiers:
 
-       	       - +
-	       - space
-               - \#
+       	      	 	- +
+	      	 	- space
+             	  	- \#
 
 <hr>
 
