@@ -2,43 +2,22 @@
 
 int _printf(const char *format, ...)
 {
-	int to_print;
-
+	char next_letter;
 	va_list arg;
+	int index = 0;
 
 	va_start(arg, format);
 
-
-	while (format[to_print] != '\0')
+	while (format[index] != '\0')
 	{
 		/* Check for % */
-		if (format[to_print == '%'])
+		if (format[index] == '%')
 		{
-			to_print++;
-		}
-		while (format[to_print] == ' ')
-		{
-			switch (format[to_print])
-			{
-			case 'd': case 'i': case 'u':
-				to_print += get_int(arg);
-				if (to_print < 0)
-				{
-					to_print *= -1;
-				}
-				break;
-			case 'c':
-				to_print += get_char(arg);
-				break;
-			case 's':
-				to_print += get_string(arg);
-				break;
+			next_letter = format[index + 1];
 
-			default:
-				break;
-			}
+			get_specifier(next_letter, arg);
 		}
+		index++;
 	}
-	va_end(arg);
-	return (to_print);
+	return(index);
 }

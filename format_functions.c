@@ -14,14 +14,14 @@ int get_int(va_list arg)
 {
 	int num1, num2, length, digit, flag;
 	char buffer [2] = { '0', '\0'};
-	
+
 	num1 = va_arg(arg, int);
 
 	length = 1000000000;
 	num2 = 0;
 	flag = 0;
 
-	
+
 	/*  Negative sign  */
 	if (num1 < 0)
 	{
@@ -31,8 +31,8 @@ int get_int(va_list arg)
 		num1 *= -1;
 	}
 
-	
-	/*  If num is zero, print 0 */            
+
+	/*  If num is zero, print 0 */
 	if (num1 == 0)
 	{
 		write(1, "0", 1);
@@ -45,7 +45,8 @@ int get_int(va_list arg)
 		flag = 1;
 		num1++;
 	}
-	
+
+	/* Handles positive integers */
 	if (num1 > 0)
 	{
 		while (num1 / length < 0)
@@ -90,8 +91,10 @@ int get_char(va_list arg)
 {
 	char character;
 
-	character = (char)va_arg(arg, int);
-	write(1, &character,1 );
+	character = va_arg(arg, int);
+	write(1, &character, 1);
+
+	return (1);
 }
 
 
@@ -107,5 +110,23 @@ int get_char(va_list arg)
 
 int get_string(va_list arg)
 {
+	int index = 0;
+	char *string;
 
+	string = va_arg(arg, char*);
+
+	if (string == NULL)
+	{
+		return (0);
+	}
+
+	while (*string != '\0')
+	{
+		write(1, string, 1);
+
+		string++;
+		index++;
+	}
+
+	return (index);
 }
