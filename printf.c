@@ -5,10 +5,8 @@
  *
  *  @format: format specifier
  *
- *  Return: String length
+ *  Return: Number of args length
  */
-
-
 
 int _printf(const char *format, ...)
 {
@@ -32,15 +30,9 @@ int _printf(const char *format, ...)
 		{
 			index++;
 			if (format[index] == '\0')
-			{
 				return (-1);
-			}
-
 			while (format[index] == ' ')
-			{
 				index++;
-			}
-
 			get_f_spec =  get_specifier(format[index]);
 
 			if (get_f_spec == NULL)
@@ -50,17 +42,12 @@ int _printf(const char *format, ...)
 				spec_count += 2;
 			}
 			else
-			{
 				spec_count += get_f_spec(arg);
-			}
 		}
 			else
-			{
 				_putchar(format[index]);
 				spec_count++;
-			}
-		}
-
+	}
 		va_end(arg);
-		return(spec_count);
+		return (spec_count);
 }
