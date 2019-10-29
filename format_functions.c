@@ -1,54 +1,66 @@
 #include "holberton.h"
 
 /**
-* func - function description
-*
-* param1
-*
-* param2
-*
-* Return: return type
-*/
+ *  get_int - Prints integersfor i, d, u flags
+ *
+ *  @arg: va_list name
+ *
+ *  Return: Inxteger
+ */
+
+
 
 int get_int(va_list arg)
 {
-	int n;
-	int len = 0,div;
-	unsigned int num;
 
-	n = va_arg(arg, int);
+	int n = va_arg(arg, int);
+	int num;
+	int last = n % 10;
+	int dig;
+	int exp = 1;
+	int i = 1;
 
+	n = n / 10;
+	num = n;
 
-	if (n < 0)
+	if (last < 0)
 	{
-		len += _putchar('-');
-		num = n * -1;
+		_putchar('-');
+		num = -num;
+		n = -n;
+		last = -last;
+		i++;
 	}
-	else
+	if (num > 0)
+	{
+		while (num / 10 != 0)
+		{
+			exp = exp * 10;
+			num = num / 10;
+		}
 		num = n;
-
-	for (; num / div > 9; )
-		div *= 10;
-
-	for (; div != 0; )
-	{
-		len += _putchar('0' + num / div);
-		num %= div;
-		div /= 10;
+		while (exp > 0)
+		{
+			dig = num / exp;
+			_putchar(dig + '0');
+			num = num - (dig * exp);
+			exp = exp / 10;
+			i++;
+		}
 	}
-	return (len);
+	_putchar(last + '0');
+
+	return (i);
 
 }
 
 
 /**
-* func - function description
+ * get_char- Prints for char flag
 *
-* param1
+* @arg: va_list name
 *
-* param2
-*
-* Return: return type
+* Return: Character
 */
 
 int get_char(va_list arg)
@@ -63,13 +75,11 @@ int get_char(va_list arg)
 
 
 /**
-* func - function description
+* get_string - Prints for s flag
 *
-* param1
+* @arg: va_list name
 *
-* param2
-*
-* Return: return type
+* Return:  Character pointer
 */
 
 int get_string(va_list arg)

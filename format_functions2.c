@@ -2,58 +2,32 @@
 
 /**
  *rev_string - shows the pointer of the var
- *@s: var for string pointer
+ *@arg: var for string pointer
  *Return: (rev string)
  */
 
-int rev_string(va_list arg)
+int get_reverse(va_list arg)
 {
-	char rev[1000];
-	int a, b;
+	char *rev = va_arg(arg, char*);
+	char *begin = rev;
+	int index = 0;
 
-	a = 0;
-
-	char *s = va_arg(arg, char*);
-	while (*(s + a) != '\0')
+	if (rev == NULL)
 	{
-		rev[a] = *(s + a);
-		a++;
+		return (0);
 	}
-	b = a - 1;
-	a = 0;
-
-	while (b >= 0)
+	while (*rev != '\0')
 	{
-		*(s + b) = rev[a];
-		b--;
-		a++;
+		index++;
+		rev++;
 	}
-	return (a);
-}
 
-#include "holberton.h"
-
-/**
- * rot13 -encodes a string into 1337
- * @s: string
- * Return: string
- */
-
-char *rot13(char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
+	while (rev > begin)
 	{
-		if ((s[i] >= 'a' && s[i] <= 'm') || (s[i] >= 'A' && s[i] <= 'M'))
-		{
-			s[i] = (s[i] + 13);
-		}
-		else if ((s[i] >= 'n' && s[i] <= 'z') || (s[i] >= 'N' && (s[i] + 13) <= 'Z'))
-		{
-			s[i] = (s[i] - 13);
-		}
-		i++;
+		write(1, rev ,1);
+		rev--;
 	}
-	return (s);
+	write(1, rev, 1);
+
+	return (index);
 }

@@ -13,7 +13,7 @@ typedef struct format_spec
 {
 	char  *spec;
 	int (*f)(va_list);
-}spec_type;
+} spec_type;
 
 int _printf(const char *format, ...);
 int (*get_specifier(char format))(va_list);
@@ -24,5 +24,7 @@ int get_reverse(va_list arg);
 void _puts(char *str);
 int _putchar(char c);
 int _strlen(char *str);
-int get_rot13(va_list arg);
+//int get_rot13(va_list arg);
+int rev_string(va_list arg);
+
 #endif

@@ -18,16 +18,9 @@ char *convert(unsigned int num, int base)
 
 	do
 	{
-		*--ptr = hex[num%base];
+		*--ptr = hex[num % base];
 		num /= base;
 	}while (num != 0);
 
 	return (ptr);
-}
-
-int main()
-{
-	unsigned int i = 432;
-	puts(convert(i, 8));
-	return 0;
 }
