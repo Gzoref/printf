@@ -86,9 +86,7 @@ int get_string(va_list arg)
 
 	while (string[index] != '\0')
 	{
-		write(1, string, 1);
-
-		string++;
+		_putchar(string[index]);
 		index++;
 	}
 

@@ -13,7 +13,7 @@ typedef struct format_spec
 {
 	char  *spec;
 	int (*f)(va_list);
-} spec_type;
+}spec_type;
 
 int _printf(const char *format, ...);
 int (*get_specifier(char format))(va_list);

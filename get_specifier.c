@@ -14,7 +14,7 @@ int (*get_specifier(char format))(va_list)
 
 	for (i = 0; type[i].spec != NULL; i++)
 	{
-		if (format != '\0')
+		if (format == *type[i].spec)
 		{
 		return (type[i].f);
 		}
