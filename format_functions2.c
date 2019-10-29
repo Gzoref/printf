@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- *rev_string - shows the pointer of the var
+ *get_reverse - shows the pointer of the var
  *@arg: var for string pointer
  *Return: (rev string)
  */
@@ -24,7 +24,7 @@ int get_reverse(va_list arg)
 
 	while (rev > begin)
 	{
-		write(1, rev ,1);
+		write(1, rev, 1);
 		rev--;
 	}
 	write(1, rev, 1);

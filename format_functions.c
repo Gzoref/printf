@@ -8,8 +8,6 @@
  *  Return: Inxteger
  */
 
-
-
 int get_int(va_list arg)
 {
 
