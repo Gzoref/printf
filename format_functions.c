@@ -12,51 +12,32 @@
 
 int get_int(va_list arg)
 {
-	int num1, num2, index, digit, last_digit, exponent;
+	int n;
+	int len = 0,div;
+	unsigned int num;
 
-	num1 = va_arg(arg, int);
-	exponent = 1;
-	index = 1;
-	last_digit = num1 % 10;
-
-	num1 /= 10;
-	num2 = num1;
+	n = va_arg(arg, int);
 
 
-	/*  Negative sign  */
-	if (last_digit < 0)
+	if (n < 0)
 	{
-		_putchar('-');
-
-		/*  Multiply by -1 to make number negative  */
-		num1 *= -1;
-		last_digit *= -1;
-		index++;
+		len += _putchar('-');
+		num = n * -1;
 	}
+	else
+		num = n;
 
+	for (; num / div > 9; )
+		div *= 10;
 
-	/*  If num is zero, print 0 */
-	if (num1 > 0)
+	for (; div != 0; )
 	{
-		while (num2 / 10 != 0)
-		{
-			exponent *= 10;
-			num2 /= 10;
-		}
-		num2 = num1;
-
-		while (exponent > 0)
-		{
-			digit = num2 / exponent;
-			_putchar(digit + '0');
-			num2 = num2 - (digit * exponent);
-			exponent /= 1;
-			index++;
-		}
+		len += _putchar('0' + num / div);
+		num %= div;
+		div /= 10;
 	}
-	_putchar(last_digit + '0');
+	return (len);
 
-	return (index);
 }
 
 
@@ -98,12 +79,12 @@ int get_string(va_list arg)
 
 	string = va_arg(arg, char*);
 
-	if (string == NULL)
+	if (!string)
 	{
 		return (0);
 	}
 
-	while (*string != '\0')
+	while (string[index] != '\0')
 	{
 		write(1, string, 1);
 

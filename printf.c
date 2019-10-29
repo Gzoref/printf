@@ -1,23 +1,56 @@
 #include "holberton.h"
 
+
+
 int _printf(const char *format, ...)
 {
-	char next_letter;
+
+	int (*get_f_spec)(va_list);
+	int index, spec_count = 0;
+
 	va_list arg;
-	int index = 0;
 
 	va_start(arg, format);
 
-	while (format[index] != '\0')
+	if (format == NULL)
 	{
-		/* Check for % */
+		return (-1);
+	}
+	for (index = 0; format[index] != '\0'; index++)
+	{
+		/*  Check for format specifier  */
 		if (format[index] == '%')
 		{
-			next_letter = format[index + 1];
+			if (format[index] == '\0')
+			{
+				return (-1);
+			}
 
-			get_specifier(next_letter, arg);
+			while (format[index] == ' ')
+			{
+				index++;
+			}
+
+			get_f_spec =  get_specifier(format[index]);
+
+			if (get_f_spec == NULL)
+			{
+				_putchar('%');
+				_putchar(format[index]);
+				spec_count += 2;
+			}
+			else
+			{
+				spec_count += get_f_spec(arg);
+			}
 		}
-		index++;
-	}
-	return(index);
+			else
+			{
+				_putchar(format[index]);
+				spec_count++;
+			}
+		}
+
+		va_end(arg);
+		return(spec_count);
 }

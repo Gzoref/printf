@@ -1,28 +1,23 @@
 #include "holberton.h"
 
-int get_specifier(char format, va_list arg)
+int (*get_specifier(char format))(va_list)
 {
-	int to_print = 0;
+	int i;
 
-	switch (format)
+	spec_type type [] = {
+		{"i", get_int},
+		{"d", get_int},
+		{"c", get_char},
+		{"s", get_string},
+		{NULL, NULL}
+	};
+
+	for (i = 0; type[i].spec != NULL; i++)
 	{
-	case '%':
-		to_print = _putchar('%');
-		break;
-	case 'd': case 'i': case 'u':
-		to_print = get_int(arg);
-		break;
-	case 'c':
-		to_print = get_char(arg);
-		break;
-	case 's':
-		to_print = get_string(arg);
-		break;
-	default:
-		break;
-		to_print++;
+		if (format != '\0')
+		{
+		return (type[i].f);
+		}
 	}
-	to_print++;
-
-	return (to_print);
+	return (NULL);
 }
