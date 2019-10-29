@@ -4,7 +4,7 @@
  *  get_specifier - Link format specifier to appropriate function
  *
  *  @format: Format character
- x*
+ *
  *  Return: Type of specifierx
  */
 
