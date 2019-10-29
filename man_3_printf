@@ -1,0 +1,38 @@
+.TH PRINTF(1) "29 October 2019" "0.32" "_printf command"
+.SH NAME
+.B _printf
+- format and print data
+.SH SYNOPSIS
+.B _printf
+I.FORMAT [ARG]...
+
+.B _printf
+I.OPTION
+
+.SH DESCRIPTION
+Print Argument(s) depending on the options passed in:
+
+\"
+
+%d
+
+%i
+
+%u
+
+%c
+
+%s
+
+%r
+
+.SH EXAMPLE
+
+_printf("%s", str);
+
+_printf("%d", 21);
+
+.SH BUGS
+No known bugs
+.SH AUTHOR
+Written by Marcelo Martins.
