@@ -63,7 +63,7 @@ int get_int(va_list arg)
 
 int get_char(va_list arg)
 {
-	int character = va_arg(arg, int);
+	char character = va_arg(arg, int);
 	return (_putchar(character));
 }
 
