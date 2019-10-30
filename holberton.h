@@ -10,10 +10,8 @@
 #define BUFFER 1024
 
 /**
- * format_spec - Struct
- *
+ * format_spec - Struct.
  * @spec: specifier
- *
  * @f: function, pointer
  */
 

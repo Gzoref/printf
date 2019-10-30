@@ -34,9 +34,9 @@ int get_reverse(va_list arg)
 /**
  * get_percent - Checks for unused args
  *
- *  @arg: va_list name
+ * @arg: va_list name
  *
- *  Return: Percent character
+ * Return: Percent character
  */
 
 int get_percent(va_list __attribute__((unused)) arg)
