@@ -24,6 +24,7 @@ typedef struct format_spec
 int _printf(const char *format, ...);
 int (*get_specifier(char format))(va_list);
 int get_int(va_list arg);
+int get_unsigned(va_list arg);
 int get_char(va_list arg);
 int get_string(va_list arg);
 int get_reverse(va_list arg);
@@ -34,5 +35,6 @@ int rev_string(va_list arg);
 int get_percent(va_list arg);
 int get_hex(va_list arg);
 int get_heX(va_list arg);
+
 
 #endif

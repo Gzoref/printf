@@ -5,7 +5,7 @@
  *
  *  @arg: va_list name
  *
- *  Return: Inxteger
+ *  Return: Integer
  */
 
 int get_int(va_list arg)
@@ -49,5 +49,40 @@ int get_int(va_list arg)
 		}
 	}
 	_putchar(last + '0');
+	return (index);
+}
+
+
+/**
+ *  get_unsigned - Prints unsigned integers
+ *
+ *  @arg: va_list name
+ *
+ *  Return: Integer
+ */
+
+
+int get_unsigned(va_list arg)
+{
+	int index = 0, sum = 0, digit, last_digit;
+	int div = 1000000000;
+	unsigned int num = va_arg(arg, unsigned int);
+
+	while (div > 1)
+	{
+		digit = (num / div) % 10;
+		sum += digit;
+
+		if (sum != 0)
+		{
+			_putchar(digit + '0');
+			index++;
+		}
+		div /= 10;
+	}
+	last_digit = num % 10;
+	_putchar(last_digit + '0');
+	index++;
+
 	return (index);
 }

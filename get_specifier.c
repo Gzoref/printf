@@ -16,7 +16,7 @@ int (*get_specifier(char format))(va_list)
 	spec_type type[] = {
 		{"i", get_int},
 		{"d", get_int},
-		{"u", get_int},
+		{"u", get_unsigned},
 		{"c", get_char},
 		{"s", get_string},
 		{"r", get_reverse},
