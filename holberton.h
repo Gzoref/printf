@@ -26,5 +26,7 @@ int _putchar(char c);
 int _strlen(char *str);
 int rev_string(va_list arg);
 int get_percent(va_list arg);
+int get_hex(va_list arg);
+int get_heX(va_list arg);
 
 #endif
