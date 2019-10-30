@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 		}
 			else
 				_putchar(format[index]);
-				spec_count++;
+		spec_count++;
 	}
 		va_end(arg);
 		return (spec_count);
