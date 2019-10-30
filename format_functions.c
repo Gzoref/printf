@@ -64,6 +64,7 @@ int get_int(va_list arg)
 int get_char(va_list arg)
 {
 	char character = va_arg(arg, int);
+
 	return (_putchar(character));
 }
 
@@ -80,6 +81,7 @@ int get_string(va_list arg)
 {
 	int count;
 	char *str = va_arg(arg, char *);
+
 	if (str == NULL)
 		str = "(null)";
 	for (count = 0; str[count] != '\0'; count++)
