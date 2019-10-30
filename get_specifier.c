@@ -9,7 +9,6 @@
  */
 
 
-
 int (*get_specifier(char format))(va_list)
 {
 	int i;
@@ -21,6 +20,9 @@ int (*get_specifier(char format))(va_list)
 		{"c", get_char},
 		{"s", get_string},
 		{"r", get_reverse},
+		{"x", get_hex},
+		{"X", get_heX},
+		{"%", get_percent},
 		{NULL, NULL}
 	};
 

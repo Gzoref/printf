@@ -13,8 +13,6 @@ int _putchar(char c)
 }
 
 
-#include "holberton.h"
-
 /**
  * _puts -  prints a string
  *
@@ -22,6 +20,7 @@ int _putchar(char c)
  *
  * Return: string to stdout
  */
+
 
 void _puts(char *str)
 {
