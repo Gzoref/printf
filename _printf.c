@@ -19,9 +19,7 @@ int _printf(const char *format, ...)
 	va_start(arg, format);
 
 	if (format == NULL)
-	{
 		return (-1);
-	}
 
 	for (index = 0; format[index] != '\0'; index++)
 	{
@@ -44,10 +42,12 @@ int _printf(const char *format, ...)
 			else
 				spec_count += get_f_spec(arg);
 		}
-			else
-				_putchar(format[index]);
-		spec_count++;
+		else
+		{
+			_putchar(format[index]);
+			spec_count++;
+		}
 	}
-		va_end(arg);
-		return (spec_count);
+	va_end(arg);
+	return (spec_count);
 }
