@@ -46,6 +46,7 @@ int get_percent(va_list __attribute__((unused)) arg)
 	return (1);
 }
 
+
 /**
 * get_hex - Convert to hexadecimal lowercase
 *

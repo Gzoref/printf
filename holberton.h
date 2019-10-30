@@ -9,6 +9,14 @@
 
 #define BUFFER 1024
 
+/**
+ * format_spec - Struct
+ *
+ * @spec: specifier
+ *
+ * @f: function, pointer
+ */
+
 typedef struct format_spec
 {
 	char  *spec;
