@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 {
 
 	int (*get_f_spec)(va_list);
-	int index, spec_count = 0;
+	unsigned int index = 0, spec_count = 0;
 
 	va_list arg;
 
