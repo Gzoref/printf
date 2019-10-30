@@ -32,6 +32,15 @@ int get_reverse(va_list arg)
 	return (index);
 }
 
+/**
+ *  get_percnt - Checks for unused args
+ *
+ *  @arg: va_list name
+ *
+ *  Return: Percent character
+ */
+
+
 int get_percent(va_list __attribute__((unused)) arg)
 {
 	_putchar('%');
