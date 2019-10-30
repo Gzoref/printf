@@ -24,7 +24,7 @@ int get_reverse(va_list arg);
 void _puts(char *str);
 int _putchar(char c);
 int _strlen(char *str);
-//int get_rot13(va_list arg);
 int rev_string(va_list arg);
+int get_percent(va_list arg);
 
 #endif
