@@ -10,7 +10,6 @@
 
 int get_int(va_list arg)
 {
-
 	int n = va_arg(arg, int);
 	int num;
 	int last = n % 10;
@@ -63,7 +62,7 @@ int get_int(va_list arg)
 
 int get_char(va_list arg)
 {
-	char character;
+	int character;
 
 	character = va_arg(arg, int);
 	_putchar(character);
@@ -87,9 +86,9 @@ int get_string(va_list arg)
 
 	string = va_arg(arg, char*);
 
-	if (!string)
+	if (string == NULL)
 	{
-		return (0);
+		string = "(null)";
 	}
 
 	while (string[index] != '\0')
@@ -97,6 +96,5 @@ int get_string(va_list arg)
 		_putchar(string[index]);
 		index++;
 	}
-
 	return (index);
 }
