@@ -134,3 +134,45 @@ int get_heX(va_list arg)
 	}
 	return (hex);
 }
+
+
+/**
+* get_binary -convert to hexadecimal uppercase
+*
+* @arg: va_list name
+*
+* Return: Hex value
+*/
+
+int get_binary(va_list arg)
+{
+	unsigned int index, binary;
+	unsigned int bit_count[32];
+
+	unsigned int num = va_arg(arg, int);
+
+	index = 0;
+	binary = 0;
+
+	if (num < 1)
+	{
+		_putchar (48);
+		index++;
+		return (index);
+	}
+
+	while (num > 0)
+	{
+		bit_count[index] = num % 2;
+		num /= 2;
+		index++;
+	}
+
+	for (binary = index - 1; binary > 0; binary--)
+	{
+		_putchar('0' + bit_count[binary]);
+	}
+	_putchar('0' + bit_count[binary]);
+
+	return (index);
+}
