@@ -70,7 +70,7 @@ int get_hex(va_list arg)
 
 		if (temp < 10)
 		{
-			hex_array[i] = temp + 49;
+			hex_array[i] = temp + 48;
 			i++;
 		}
 		else
