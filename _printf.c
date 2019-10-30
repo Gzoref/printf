@@ -23,7 +23,6 @@ int _printf(const char *format, ...)
 
 	for (index = 0; format[index] != '\0'; index++)
 	{
-		/*  Check for format specifier  */
 		if (format[index] == '%')
 		{
 			index++;
