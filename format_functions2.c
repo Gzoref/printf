@@ -21,14 +21,13 @@ int get_reverse(va_list arg)
 		index++;
 		rev++;
 	}
-
+	rev--;
 	while (rev > begin)
 	{
-		write(1, rev, 1);
+		_putchar(*rev);
 		rev--;
 	}
-	write(1, rev, 1);
-
+	_putchar(*rev);
 	return (index);
 }
 
