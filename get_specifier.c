@@ -23,6 +23,7 @@ int (*get_specifier(char format))(va_list)
 		{"x", get_hex},
 		{"X", get_heX},
 		{"b", get_binary},
+		{"o", get_octal},
 		{"%", get_percent},
 		{NULL, NULL}
 	};
