@@ -86,3 +86,38 @@ int get_unsigned(va_list arg)
 
 	return (index);
 }
+
+
+/**
+ * get_octal - Prints octal
+ *
+ * @arg: va_list
+ *
+ * Return: Integer
+ */
+int get_octal(va_list arg)
+{
+	int i = 0, j = 0;
+
+	char octal[50];
+	unsigned int getOctal = va_arg(arg, unsigned int);
+
+	if (getOctal == 0)
+	{
+		octal[i] = (0 + '0');
+		i++;
+	}
+
+	while (getOctal != 0)
+	{
+		octal[i] = (getOctal % 8) + '0';
+		getOctal /= 8;
+		i++;
+	}
+	for (i = i -1; i >= 0; i--)
+	{
+		_putchar(octal[i]);
+		j++;
+	}
+	return (j);
+}
