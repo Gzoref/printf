@@ -121,3 +121,41 @@ int get_octal(va_list arg)
 	}
 	return (j);
 }
+
+
+/**
+ * get_rot13 - Prints rot13
+ *
+ * @arg: va_list
+ *
+ * Return: Integer
+ */
+
+int get_rot13(va_list arg)
+{
+	int i, j, flag, count = 0;
+	char input[80] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char output[80] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	char *rot = va_arg(arg, char*);
+
+	for (i = 0; rot[i]; i++)
+	{
+		flag = 0;
+		for (j = 0; input[j] && !flag; j++)
+		{
+			if (rot[i] == input[j])
+			{
+				_putchar(output[j]);
+				count++;
+				flag = 1;
+			}
+		}
+		if (!flag)
+		{
+			_putchar(rot[i]);
+			count++;
+		}
+	}
+	return(count);
+}

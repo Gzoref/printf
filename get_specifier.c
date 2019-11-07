@@ -24,6 +24,7 @@ int (*get_specifier(char format))(va_list)
 		{"X", get_heX},
 		{"b", get_binary},
 		{"o", get_octal},
+		{"R", get_rot13},
 		{"%", get_percent},
 		{NULL, NULL}
 	};
