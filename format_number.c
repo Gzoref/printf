@@ -114,7 +114,7 @@ int get_octal(va_list arg)
 		getOctal /= 8;
 		i++;
 	}
-	for (i = i -1; i >= 0; i--)
+ 	for (i = i - 1; i >= 0; i--)
 	{
 		_putchar(octal[i]);
 		j++;
