@@ -8,26 +8,26 @@
 
 int get_reverse(va_list arg)
 {
+	int index = 0, length = 0;
 	char *rev = va_arg(arg, char*);
-	char *begin = rev;
-	int index = 0;
 
 	if (rev == NULL)
 	{
 		return (0);
 	}
-	while (*rev != '\0')
+
+	while (rev[length] != '\0')
 	{
 		index++;
-		rev++;
+		length++;
 	}
-	rev--;
-	while (rev > begin)
+	length--;
+
+	while (length >= 0)
 	{
-		_putchar(*rev);
-		rev--;
+		_putchar(rev[length]);
+		length--;
 	}
-	_putchar(*rev);
 	return (index);
 }
 
