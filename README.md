@@ -129,3 +129,12 @@
     ```c
     int get_heX(va_list arg); /* for %X - prints UPPERCASE HEX. */
     ```
+    
+    &#10240;<br>
+<hr>
+&#10240;<br>
+&#10240; &#10240; &#10240; Author: Marcelo Martins<br>
+&#10240; &#10240; &#10240; GitHub: @matxa<br>
+&#10240; &#10240; &#10240; Email: matxa21@gmail.com<br>
+&#10240;
+<hr>
